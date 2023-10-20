@@ -1,5 +1,7 @@
 package main
 
-func main() {
+import "go_todolist/conf"
 
+func main() {
+	conf.Init()
 }
