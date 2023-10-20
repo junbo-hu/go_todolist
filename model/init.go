@@ -24,5 +24,6 @@ func Database(connstring string) {
 	db.DB().SetMaxIdleConns(20)  //设置连接池
 	db.DB().SetMaxOpenConns(100) //设置最大连接数
 	db.DB().SetConnMaxLifetime(time.Second * 30)
-
+	DB = db
+	migration() //数据库连接是进行迁移
 }
